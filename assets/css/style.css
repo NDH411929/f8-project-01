@@ -30,6 +30,10 @@ main {
     /* height: 2000px; */
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
 }
@@ -44,6 +48,10 @@ a {
     font-size: 1.4rem;
     text-align: center;
     color: #ffffff;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 .line-clamp {
