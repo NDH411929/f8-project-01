@@ -56,6 +56,7 @@ a {
 }
 
 .btn:hover {
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -122,10 +123,6 @@ a {
     margin-left: 18px;
     padding: 13px 16px;
     border-radius: 8px;
-}
-
-.btn:hover {
-    opacity: 0.8;
 }
 
 .navbar ul a:hover {
@@ -318,11 +315,10 @@ a {
 .featured {
     margin-top: 41px;
     background: #f5fafe;
-    height: 100vh;
+    padding: 110px 0;
 }
 
 .featured .sub-title {
-    margin-top: 110px;
     display: inline-block;
     font-weight: 600;
     font-size: 3.5rem;
@@ -361,7 +357,6 @@ a {
 
 .featured .list {
     margin-top: 68px;
-    margin-bottom: 110px;
     display: flex;
     gap: 30px;
 }
