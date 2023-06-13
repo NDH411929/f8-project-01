@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reponsive.css" />
     <title>PROJECT-01</title>
 
     <!-- Favicon -->
@@ -40,21 +41,33 @@
     3. Footer
     -->
 
-    <!--    HEADER    -->
+    <!--   PC-HEADER    -->
     <header class="fixed-header">
         <div class="content">
             <nav class="navbar">
+                <!-- tablet/mobile-menu -->
+                <label for="menu-checkbox" class="toggle-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512" >
+                        <path 
+                            fill="#0f1b4c"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </label>
+
+
                 <!-- logo -->
                 <a href="#" class="logo">
-                    <img src="./assets/img/Logo.svg" alt="Besnik." />
+                    <img src="./assets/img/Logo.svg" alt="Besnik." class="navbar-logo" />
                 </a>
                 <!-- navigation -->
-                <ul>
-                    <li><a href="#">Home</a></li>
+                <ul id="pc-nav">
+                    <li class="home-decorate"><a href="#">Home</a></li>
                     <li><a href="#service">Service</a></li>
                     <li><a href="#fratures">Fratures</a></li>
                     <li><a href="#resources">Resources</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="show-on-mobie decorate"><a href="#!">Sign in</a></li>
+                    <li class="show-on-mobie"><a href="#!">Sign up</a></li>
                 </ul>
                 <!-- action -->
                 <div class="actions">
@@ -64,6 +77,29 @@
             </nav>
         </div>
     </header>
+
+    <!-- Tablet/Mobile-HEADER -->
+    <header class="mobile-header">
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+
+        <label for="menu-checkbox" class="menu-overlay"></label>
+
+        <div class="menu-drawer">
+            <a href="#" class="logo">
+                <img src="./assets/img/Logo.svg" alt="Besnik." class="drawer-logo" />
+            </a>
+            <!-- navigation -->
+            <ul id="mobile-nav"></ul>
+
+            <script>
+                const pcNav = document.querySelector("#pc-nav");
+                const mobileNav = document.querySelector("#mobile-nav");
+                mobileNav.innerHTML = pcNav.innerHTML;
+            </script>
+        </div>
+    </header>
+
+
     <main>
         <!--    HERO    -->
         <div class="hero-wrap">

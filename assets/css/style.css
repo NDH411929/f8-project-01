@@ -28,7 +28,6 @@ body {
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
-    /* height: 2000px; */
 }
 
 .logo:hover {
@@ -194,7 +193,10 @@ a {
 }
 
 .client .list-custom {
-    display: flex;
+    display: grid;
+    gap: 70px;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
     margin-top: 70px;
     justify-content: space-between;
 }
